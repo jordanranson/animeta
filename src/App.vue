@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { AnimetaTransition, AnimetaTransitionGroup } from '@/lib/animeta.js'
+import animeta from '@/lib/animeta.js'
 
 export default {
   name: 'App',
@@ -61,8 +61,7 @@ export default {
   },
 
   components: {
-    AnimetaTransition,
-    AnimetaTransitionGroup
+    ...animeta
   }
 }
 </script>
