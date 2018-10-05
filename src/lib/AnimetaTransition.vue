@@ -78,9 +78,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-[v-leave-to] {
-  pointer-events: none;
-}
-</style>
