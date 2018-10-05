@@ -1,21 +1,19 @@
-# animeta
+# Animeta
 
-## Project setup
-```
-npm install
-```
+Vue transition components powered by AnimeJS.
 
-### Compiles and hot-reloads for development
+## Installation
 ```
-npm run serve
+npm install vue-animeta
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Usage
+```js
+import animeta from '@/lib/animeta.js'
 
-### Lints and fixes files
-```
-npm run lint
+export default {
+  components: {
+    ...animeta
+  }
+}
 ```
