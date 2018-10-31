@@ -9,11 +9,11 @@ npm install vue-animeta
 
 ## Usage
 ```js
-import animeta from '@/lib/animeta.js'
+import animetaComponents from 'vue-animeta'
 
 export default {
   components: {
-    ...animeta
+    ...animetaComponents
   }
 }
 ```
