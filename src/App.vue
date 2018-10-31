@@ -5,6 +5,8 @@
         :to="{ opacity: 1, scale: 1, rotate: '1turn'  }"
         :from="{ opacity: 0, scale: 0.5, elasticity: 0 }"
         :options="{ duration: 500 }"
+        @after-leave="log('leave')"
+        @after-enter="log('enter')"
       >
         <div class="box" v-if="!hidden"></div>
       </animeta-transition>
@@ -62,6 +64,12 @@ export default {
 
   components: {
     ...animeta
+  },
+
+  methods: {
+    log (msg) {
+      console.log(msg)
+    }
   }
 }
 </script>

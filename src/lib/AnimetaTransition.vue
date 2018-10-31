@@ -60,7 +60,12 @@ export default {
           ...this.options,
           ...this.to,
           targets: el
-        }).finished.then(done)
+        }).finished.then(() => {
+          done()
+          this.$nextTick(() => {
+            this.$emit('after-enter')
+          })
+        })
       })
     },
 
@@ -73,7 +78,12 @@ export default {
         ...this.options,
         ...this.from,
         targets: el
-      }).finished.then(done)
+      }).finished.then(() => {
+        done()
+        this.$nextTick(() => {
+          this.$emit('after-leave')
+        })
+      })
     }
   }
 }
