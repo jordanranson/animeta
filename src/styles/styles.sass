@@ -1,0 +1,140 @@
+@import "./variables.sass"
+
+*
+  box-sizing: border-box
+
+html,
+body
+  padding: 0
+  margin: 0
+
+body
+  width: 100%
+  min-height: 100vh
+  background-color: $background
+
+body,
+input,
+button
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  color: $font-color
+  font-size: $font-size
+  letter-spacing: -0.025em
+  line-height: 1.3
+
+a
+  color: $color2
+  cursor: pointer
+  display: inline-flex
+  text-decoration: none
+  position: relative
+  border-bottom: solid 1px $color1
+  transition: all 150ms
+  &:hover
+    color: $color1
+    border-bottom-color: $color2
+
+small
+  font-size: $font-size-sm
+
+strong
+  font-weight: 600
+
+em
+  font-style: italic
+
+p
+  max-width: 700px
+
+p,
+pre,
+.demo
+  line-height: 1.5
+  margin-bottom: $margin-sm
+
+.link
+  display: inline-flex
+  position: relative
+
+.title
+  font-weight: 600
+  font-size: $title-size
+  margin: $margin-md 0 $margin 0
+  &.is-small
+    font-size: $title-size-sm
+
+.rule
+  margin: 0 auto
+  width: 100px
+  height: 4px
+  border: none
+  background: linear-gradient(to left, $color1, $color2)
+  opacity: 0.4
+  margin: $margin-lg 0
+  &.is-small
+    margin: $margin-md 0
+
+.faded
+  color: $font-color-light
+
+.section
+  width: 100%
+  margin: $margin 0
+  padding: 0 $margin
+  +desktop
+    width: 100%
+    margin: $margin auto
+    max-width: 1200px
+
+.section-inner
+  width: 100%
+  position: relative
+
+.columns
+  width: 100%
+  +desktop
+    display: flex
+
+.column
+  +desktop
+    flex: 1
+    &:not(:last-child)
+      margin-right: $margin
+
+.code
+  font-family: monospace
+  background: rgba($font-color-light, 0.2)
+  padding: $margin-sm
+  letter-spacing: normal
+  border-radius: 11px
+  width: 100%
+  overflow-x: auto
+
+.demo
+  width: 100%
+  margin: $margin-md 0
+
+.demo-controls
+  margin-bottom: $margin-md
+
+.button
+  display: inline-flex
+  height: 44px
+  padding: $margin-sm $margin
+  background: $color2
+  border: none
+  line-height: 0.9rem
+  color: $white
+  border-radius: 7px
+  box-shadow: 0 4px 13px rgba($color2, 0.4)
+  transition: all 150ms
+  cursor: pointer
+  outline: none
+  font-size: $font-size-sm
+  &:hover,
+  &:active
+    background-color: $color1
+    box-shadow: 0 4px 13px rgba($color1, 0.4)
+  &:active
+    transform: translateY(0.1rem)
